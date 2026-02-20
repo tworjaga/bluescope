@@ -1,0 +1,103 @@
+2026-02-11 23:02:32,866 - __main__ - INFO - ============================================================
+2026-02-11 23:02:32,871 - __main__ - INFO - BlueScope - Enterprise Bluetooth Monitoring Platform
+2026-02-11 23:02:32,872 - __main__ - INFO - ============================================================
+2026-02-11 23:02:32,872 - __main__ - INFO - Starting BlueScope with GUI
+2026-02-11 23:02:33,299 - backend.capture_manager - INFO - CaptureManager initialized with backend: mock
+2026-02-11 23:02:33,300 - backend.signal_duplicator - INFO - SignalDuplicator initialized
+2026-02-11 23:02:33,301 - backend.export_manager - INFO - ExportManager initialized with directory: exports
+2026-02-11 23:02:34,264 - frontend.ui.live_capture_view - INFO - LiveCaptureView initialized
+2026-02-11 23:02:34,295 - frontend.ui.main_window - INFO - Main window initialized
+2026-02-11 23:02:38,023 - frontend.ui.main_window - INFO - Capture started
+2026-02-11 23:02:38,031 - backend.capture_manager - INFO - Starting Bluetooth capture...
+2026-02-11 23:02:38,032 - backend.capture_manager - INFO - Starting mock capture
+2026-02-11 23:03:00,455 - backend.signal_duplicator - INFO - Signal recording started
+2026-02-11 23:03:01,346 - backend.signal_duplicator - WARNING - Duplication not enabled in config
+2026-02-11 23:03:02,009 - backend.signal_duplicator - INFO - Replay loop started with 2 signals
+2026-02-11 23:03:02,009 - backend.signal_duplicator - INFO - Signal replay started with 2 signals
+2026-02-11 23:03:02,011 - backend.signal_duplicator - INFO - Replay loop completed
+2026-02-11 23:03:48,133 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 3s
+2026-02-11 23:03:53,698 - backend.bluetooth_security - INFO - Starting channel analysis for 2s
+2026-02-11 23:03:55,780 - backend.bluetooth_security - INFO - Channel analysis complete
+2026-02-11 23:03:59,345 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 2s
+2026-02-11 23:04:01,882 - backend.bluetooth_security - INFO - Starting Faraday simulation with 100dB attenuation
+2026-02-11 23:04:01,882 - backend.bluetooth_security - INFO - Faraday simulation complete
+2026-02-11 23:04:06,420 - backend.bluetooth_security - INFO - Starting full Bluetooth security audit
+2026-02-11 23:04:06,421 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 5s
+2026-02-11 23:04:11,503 - backend.bluetooth_security - INFO - Starting channel analysis for 5s
+2026-02-11 23:04:16,528 - backend.bluetooth_security - INFO - Channel analysis complete
+2026-02-11 23:04:16,528 - backend.bluetooth_security - INFO - Starting Faraday simulation with 100dB attenuation
+2026-02-11 23:04:16,529 - backend.bluetooth_security - INFO - Faraday simulation complete
+2026-02-11 23:04:24,316 - frontend.ui.main_window - INFO - Live capture view opened
+2026-02-11 23:04:31,829 - frontend.ui.main_window - INFO - Settings requested
+2026-02-11 23:05:06,996 - backend.signal_duplicator - INFO - Signal recording stopped
+2026-02-11 23:05:07,582 - backend.signal_duplicator - INFO - Live signal duplication stopped
+2026-02-11 23:05:08,177 - backend.signal_duplicator - INFO - Signal replay stopped
+2026-02-11 23:05:09,630 - backend.capture_manager - INFO - Stopping Bluetooth capture...
+2026-02-11 23:05:09,630 - backend.capture_manager - INFO - Capture stopped
+2026-02-11 23:05:09,632 - frontend.ui.main_window - INFO - Capture stopped
+2026-02-11 23:05:16,911 - frontend.ui.main_window - INFO - Refresh view requested
+2026-02-14 22:36:19,294 - __main__ - INFO - ============================================================
+2026-02-14 22:36:19,295 - __main__ - INFO - BlueScope - Enterprise Bluetooth Monitoring Platform
+2026-02-14 22:36:19,295 - __main__ - INFO - ============================================================
+2026-02-14 22:36:19,295 - __main__ - INFO - Starting BlueScope with GUI
+2026-02-14 22:36:19,512 - backend.capture_manager - INFO - CaptureManager initialized with backend: mock
+2026-02-14 22:36:19,512 - backend.signal_duplicator - INFO - SignalDuplicator initialized
+2026-02-14 22:36:19,515 - backend.export_manager - INFO - ExportManager initialized with directory: exports
+2026-02-14 22:36:21,316 - frontend.ui.live_capture_view - INFO - LiveCaptureView initialized
+2026-02-14 22:36:21,383 - frontend.ui.main_window - INFO - Main window initialized
+2026-02-15 23:04:54,597 - __main__ - INFO - ============================================================
+2026-02-15 23:04:54,598 - __main__ - INFO - BlueScope - Enterprise Bluetooth Monitoring Platform
+2026-02-15 23:04:54,598 - __main__ - INFO - ============================================================
+2026-02-15 23:04:54,598 - __main__ - INFO - Starting BlueScope with GUI
+2026-02-15 23:04:55,435 - backend.capture_manager - INFO - CaptureManager initialized with backend: mock
+2026-02-15 23:04:55,436 - backend.signal_duplicator - INFO - SignalDuplicator initialized
+2026-02-15 23:04:55,436 - backend.export_manager - INFO - ExportManager initialized with directory: exports
+2026-02-15 23:04:56,466 - frontend.ui.live_capture_view - INFO - LiveCaptureView initialized
+2026-02-15 23:04:56,498 - frontend.ui.main_window - INFO - Main window initialized
+2026-02-15 23:08:58,432 - __main__ - INFO - ============================================================
+2026-02-15 23:08:58,433 - __main__ - INFO - BlueScope - Enterprise Bluetooth Monitoring Platform
+2026-02-15 23:08:58,433 - __main__ - INFO - ============================================================
+2026-02-15 23:08:58,433 - __main__ - INFO - Starting BlueScope with GUI
+2026-02-15 23:08:58,495 - backend.capture_manager - INFO - CaptureManager initialized with backend: mock
+2026-02-15 23:08:58,496 - backend.signal_duplicator - INFO - SignalDuplicator initialized
+2026-02-15 23:08:58,496 - backend.export_manager - INFO - ExportManager initialized with directory: exports
+2026-02-15 23:08:59,085 - frontend.ui.live_capture_view - INFO - LiveCaptureView initialized
+2026-02-15 23:08:59,114 - frontend.ui.main_window - INFO - Main window initialized
+2026-02-15 23:09:09,572 - backend.signal_duplicator - INFO - Signal recording started
+2026-02-15 23:09:12,838 - backend.signal_duplicator - WARNING - Duplication not enabled in config
+2026-02-15 23:09:13,495 - backend.signal_duplicator - INFO - Replay loop started with 0 signals
+2026-02-15 23:09:13,495 - backend.signal_duplicator - INFO - Signal replay started with 0 signals
+2026-02-15 23:09:13,495 - backend.signal_duplicator - INFO - Replay loop completed
+2026-02-15 23:09:20,187 - frontend.ui.main_window - INFO - Capture started
+2026-02-15 23:09:20,195 - backend.capture_manager - INFO - Starting Bluetooth capture...
+2026-02-15 23:09:20,196 - backend.capture_manager - INFO - Starting mock capture
+2026-02-15 23:10:11,991 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 3s
+2026-02-15 23:10:17,799 - backend.bluetooth_security - INFO - Starting channel analysis for 2s
+2026-02-15 23:10:19,877 - backend.bluetooth_security - INFO - Channel analysis complete
+2026-02-15 23:10:22,093 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 2s
+2026-02-15 23:10:25,055 - backend.bluetooth_security - INFO - Starting Faraday simulation with 100dB attenuation
+2026-02-15 23:10:25,055 - backend.bluetooth_security - INFO - Faraday simulation complete
+2026-02-15 23:10:27,947 - backend.bluetooth_security - INFO - Starting full Bluetooth security audit
+2026-02-15 23:10:27,947 - backend.bluetooth_security - INFO - Starting Bluetooth security scan for 5s
+2026-02-15 23:10:33,789 - backend.bluetooth_security - INFO - Starting channel analysis for 5s
+2026-02-15 23:10:38,814 - backend.bluetooth_security - INFO - Channel analysis complete
+2026-02-15 23:10:38,814 - backend.bluetooth_security - INFO - Starting Faraday simulation with 100dB attenuation
+2026-02-15 23:10:38,814 - backend.bluetooth_security - INFO - Faraday simulation complete
+2026-02-20 05:28:33,071 - __main__ - INFO - ============================================================
+2026-02-20 05:28:33,071 - __main__ - INFO - BlueScope - Enterprise Bluetooth Monitoring Platform
+2026-02-20 05:28:33,072 - __main__ - INFO - ============================================================
+2026-02-20 05:28:33,072 - __main__ - INFO - Starting BlueScope with GUI
+2026-02-20 05:28:33,522 - backend.capture_manager - INFO - CaptureManager initialized with backend: mock
+2026-02-20 05:28:33,522 - backend.signal_duplicator - INFO - SignalDuplicator initialized
+2026-02-20 05:28:33,523 - backend.export_manager - INFO - ExportManager initialized with directory: exports
+2026-02-20 05:28:34,133 - frontend.ui.live_capture_view - INFO - LiveCaptureView initialized
+2026-02-20 05:28:34,175 - frontend.ui.main_window - INFO - Main window initialized
+2026-02-20 05:28:39,585 - frontend.ui.main_window - INFO - Capture started
+2026-02-20 05:28:39,588 - backend.capture_manager - INFO - Starting Bluetooth capture...
+2026-02-20 05:28:39,588 - backend.capture_manager - INFO - Starting mock capture
+2026-02-20 05:29:06,023 - backend.signal_duplicator - WARNING - Duplication not enabled in config
+2026-02-20 05:29:06,540 - backend.signal_duplicator - INFO - Replay loop started with 0 signals
+2026-02-20 05:29:06,540 - backend.signal_duplicator - INFO - Signal replay started with 0 signals
+2026-02-20 05:29:06,540 - backend.signal_duplicator - INFO - Replay loop completed
+2026-02-20 05:29:35,750 - frontend.ui.main_window - INFO - Device selection requested
+2026-02-20 05:30:19,876 - backend.bluetooth_spam - INFO - BluetoothSpammer initialized

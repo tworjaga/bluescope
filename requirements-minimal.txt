@@ -1,0 +1,53 @@
+# BlueScope - Minimal Requirements
+# Core GUI functionality without ML features
+# Requires: Python 3.11 or higher
+
+# ============================================================================
+# Core Dependencies (Required for all installations)
+# ============================================================================
+
+# GUI Framework (Required)
+PyQt6>=6.6.0
+
+# Data Processing (Required)
+numpy>=1.26.0
+
+# Utilities (Required)
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# ============================================================================
+# Optional but Recommended
+# ============================================================================
+
+# Cross-platform BLE library (for real Bluetooth capture)
+bleak>=0.21.0
+
+# USB device access (for hardware dongles)
+pyusb>=1.2.1
+
+# ============================================================================
+# Installation Notes
+# ============================================================================
+
+# Quick Start:
+#   pip install -r requirements-minimal.txt
+#   python main.py
+
+# This minimal install includes:
+# - Full GUI with all 6 tabs
+# - Signal duplication and live capture
+# - Security audit features
+# - Bluetooth spam (simulation mode)
+# - Device scanning and channel analysis
+# - Export/import functionality
+
+# What's NOT included:
+# - Machine learning anomaly detection
+# - Deep learning features
+# - Advanced statistical analysis
+# - Real Bluetooth transmission (Linux only, requires additional setup)
+
+# To upgrade to full features later:
+#   pip install -r requirements.txt
+

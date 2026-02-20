@@ -1,0 +1,79 @@
+# BlueScope Configuration File
+# Version: 0.1.0
+
+# Application Settings
+app:
+  name: "BlueScope"
+  version: "0.1.0"
+  log_level: "INFO"
+  log_file: "logs/bluescope.log"
+
+# Capture Settings
+capture:
+  device: "auto"  # auto, hci0, nrf, ubertooth, hackrf
+  buffer_size: 10000
+  update_interval: 1000  # milliseconds
+  channel_hopping: true
+  channels: [37, 38, 39]  # BLE advertising channels
+
+# Analytics Settings
+analytics:
+  behavior_engine:
+    enabled: true
+    baseline_window: 86400  # seconds (24 hours)
+    deviation_threshold: 2.5  # standard deviations
+    pattern_min_occurrences: 3
+  
+  anomaly_engine:
+    enabled: true
+    threshold: 2.5
+    isolation_forest:
+      enabled: true
+      contamination: 0.1
+      n_estimators: 100
+    autoencoder:
+      enabled: true
+      epochs: 50
+      batch_size: 32
+    statistical:
+      enabled: true
+      window_size: 1000
+
+# UI Settings
+ui:
+  theme: "dark"
+  update_rate: 1000  # milliseconds
+  max_table_rows: 10000
+  graph_points: 60
+  window:
+    width: 1600
+    height: 900
+    fullscreen: false
+
+# Database Settings (Optional)
+database:
+  enabled: false
+  type: "postgresql"  # postgresql, sqlite
+  host: "localhost"
+  port: 5432
+  name: "bluescope"
+  user: "bluescope"
+  password: ""
+
+# Export Settings
+export:
+  auto_save: false
+  save_interval: 300  # seconds
+  format: "csv"  # csv, json, pcap
+  directory: "exports"
+
+# Security Settings
+security:
+  enable_encryption: false
+  api_key: ""
+  
+# Performance Settings
+performance:
+  max_memory_mb: 1024
+  max_cpu_percent: 80
+  thread_pool_size: 4

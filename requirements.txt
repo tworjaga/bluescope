@@ -1,0 +1,127 @@
+# BlueScope - Full Requirements
+# Complete installation with all features
+# Requires: Python 3.11 or higher
+
+# ============================================================================
+# Core Dependencies (Required)
+# ============================================================================
+
+# GUI Framework
+PyQt6>=6.6.0
+
+# Data Processing
+numpy>=1.26.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# ============================================================================
+# Machine Learning & Analytics (Recommended)
+# ============================================================================
+
+# Machine Learning
+scikit-learn>=1.8.0
+
+# Deep Learning
+torch>=2.9.0
+
+# Scientific Computing
+scipy>=1.16.0
+
+# Data Analysis
+pandas>=2.2.0
+
+# ============================================================================
+# Bluetooth & Hardware (Optional but Recommended)
+# ============================================================================
+
+# Cross-platform BLE library
+bleak>=0.21.0
+
+# USB device access (for hardware dongles)
+pyusb>=1.2.1
+
+# Serial port access (for nRF Sniffer, Ubertooth)
+pyserial>=3.5
+
+# ============================================================================
+# Security & Testing (Optional)
+# ============================================================================
+
+# Cryptography for security analysis
+cryptography>=42.0.0
+
+# Network utilities
+netifaces>=0.11.0
+
+# ============================================================================
+# Visualization & Export (Optional)
+# ============================================================================
+
+# Advanced plotting (if needed beyond PyQt6)
+pyqtgraph>=0.13.0
+
+# Export formats
+openpyxl>=3.1.0  # Excel export
+xlsxwriter>=3.1.0  # Alternative Excel export
+
+# ============================================================================
+# Development & Testing (Optional)
+# ============================================================================
+
+# Testing framework
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+
+# Code quality
+black>=24.0.0
+flake8>=7.0.0
+mypy>=1.8.0
+pylint>=3.0.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=2.0.0
+
+# ============================================================================
+# Platform-Specific Dependencies
+# ============================================================================
+
+# Windows-specific
+pywin32>=306; platform_system=="Windows"
+
+# Linux-specific (for real Bluetooth transmission)
+# Note: These require system packages to be installed
+# sudo apt-get install libbluetooth-dev
+# dbus-python>=1.3.0; platform_system=="Linux"
+
+# macOS-specific
+# pyobjc>=10.0; platform_system=="Darwin"
+
+# ============================================================================
+# Notes
+# ============================================================================
+
+# Installation Tips:
+# 1. For minimal install: pip install -r requirements-minimal.txt
+# 2. For full install: pip install -r requirements.txt
+# 3. For ML only: pip install PyQt6 numpy scikit-learn torch scipy
+# 4. For BLE hardware: pip install bleak pyusb pyserial
+
+# Linux Real Transmission:
+# To use real Bluetooth transmission features on Linux:
+# 1. Install system dependencies: sudo apt-get install libbluetooth-dev bluez
+# 2. Run with root privileges: sudo python main.py
+# 3. Or add capabilities: sudo setcap cap_net_raw+ep $(which python3)
+
+# Windows BLE:
+# On Windows 10/11, bleak requires Windows 10 version 1703 or later
+# For older Windows, use the mock backend or a USB BLE dongle
+
+# Performance:
+# - Minimum 4GB RAM for basic operation
+# - Recommended 8GB RAM for ML features
+# - SSD recommended for large packet captures
+

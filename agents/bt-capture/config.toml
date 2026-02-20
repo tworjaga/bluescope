@@ -1,0 +1,47 @@
+# BlueScope Bluetooth Capture Agent Configuration
+
+# Hardware configuration
+hardware_type = "usb_dongle"  # Options: usb_dongle, nrf_sniffer, ubertooth, hackrf
+device_id = "auto"            # Device ID or "auto" for auto-detection
+
+# Buffer configuration
+buffer_size = 100000          # Number of packets to buffer
+
+# Upload configuration
+upload_endpoint = "http://localhost:8080/api/v1/ingest"
+upload_batch_size = 100       # Packets per batch
+
+# Channel hopping
+adaptive_hopping = true       # Enable adaptive channel hopping
+hop_interval_ms = 100         # Milliseconds between channel hops
+
+# RF analysis
+rf_fingerprinting = true      # Enable RF fingerprinting
+
+# Local storage
+local_storage = true          # Enable local packet storage
+storage_path = "./data"       # Local storage directory
+max_storage_mb = 1024         # Maximum storage size in MB
+
+# Logging
+[logging]
+level = "info"                # Options: trace, debug, info, warn, error
+file = "./logs/agent.log"     # Log file path
+
+# Metrics
+[metrics]
+enabled = true                # Enable Prometheus metrics
+port = 9090                   # Metrics HTTP server port
+
+# Security
+[security]
+enable_tls = true             # Enable TLS for uploads
+verify_cert = true            # Verify server certificate
+client_cert = ""              # Client certificate path (optional)
+client_key = ""               # Client key path (optional)
+
+# Advanced
+[advanced]
+packet_timeout_ms = 1000      # Packet receive timeout
+retry_attempts = 3            # Upload retry attempts
+retry_delay_ms = 1000         # Delay between retries
