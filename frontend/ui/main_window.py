@@ -771,12 +771,17 @@ class MainWindow(QMainWindow):
                 
                 def on_packet(count):
                     from PyQt6.QtCore import QMetaObject, Qt, Q_ARG
-                    QMetaObject.invokeMethod(
-                        status_label, 
-                        "setText",
-                        Qt.ConnectionType.QueuedConnection,
-                        Q_ARG(str, f"Sent {count} packets (SIMULATION)")
-                    )
+                    try:
+                        QMetaObject.invokeMethod(
+                            status_label, 
+                            "setText",
+                            Qt.ConnectionType.QueuedConnection,
+                            Q_ARG(str, f"Sent {count} packets (SIMULATION)")
+                        )
+                    except RuntimeError:
+                        # QLabel has been deleted (dialog closed)
+                        pass
+
                 
                 spammer.on_packet_sent = on_packet
                 
