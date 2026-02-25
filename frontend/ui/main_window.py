@@ -721,10 +721,12 @@ class MainWindow(QMainWindow):
                 status_label.setText(" REAL TRANSMISSION ACTIVE - Phones will react!")
                 
                 def run_linux_spam():
+                    nonlocal linux_tx
                     loop = asyncio.new_event_loop()
                     asyncio.set_event_loop(loop)
                     
                     linux_tx = LinuxBluetoothTransmitter()
+
                     
                     async def spam():
                         if await linux_tx.initialize():
