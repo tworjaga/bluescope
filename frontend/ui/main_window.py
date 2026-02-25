@@ -622,14 +622,16 @@ class MainWindow(QMainWindow):
         import sys
         import os
         real_tx_checkbox = QCheckBox(" REAL TRANSMISSION (Linux root only)")
-        real_tx_checkbox.setEnabled(
-            LINUX_TX_AVAILABLE and 
-            sys.platform == 'linux' and 
-            os.geteuid() == 0
-        )
-        if not real_tx_checkbox.isEnabled():
-            real_tx_checkbox.setToolTip("Requires Linux with root access")
+        # Enable checkbox on all platforms, but warn if not Linux
+        real_tx_checkbox.setEnabled(True)
+        real_tx_checkbox.setToolTip("Linux with root required for real transmission. Other platforms will show simulation only.")
         layout.addWidget(real_tx_checkbox)
+        
+        # Platform warning label (shown when not on Linux)
+        platform_warning = QLabel("")
+        platform_warning.setStyleSheet("color: #ffc107; font-size: 11px;")
+        layout.addWidget(platform_warning)
+
         
         # Mode selection
 
@@ -713,8 +715,30 @@ class MainWindow(QMainWindow):
         def start_spam():
             nonlocal spammer, spam_thread, linux_tx
             
-            # Check if real transmission mode
-            if real_tx_checkbox.isChecked() and LINUX_TX_AVAILABLE:
+            # Check if real transmission mode requested
+            if real_tx_checkbox.isChecked():
+                # Check platform compatibility
+                if sys.platform != 'linux':
+                    platform_warning.setText(" Windows: Real transmission unavailable. Using simulation.")
+                    logger.warning("Real transmission requested on non-Linux platform, using simulation")
+                elif os.geteuid() != 0:
+                    platform_warning.setText(" Linux: Root privileges required. Using simulation.")
+                    logger.warning("Real transmission requested without root, using simulation")
+                elif not LINUX_TX_AVAILABLE:
+                    platform_warning.setText(" Linux TX module not available. Using simulation.")
+                    logger.warning("Linux TX module not available, using simulation")
+                else:
+                    platform_warning.setText("")
+                
+                # Only use real TX if all conditions met
+                use_real_tx = (
+                    LINUX_TX_AVAILABLE and 
+                    sys.platform == 'linux' and 
+                    os.geteuid() == 0
+                )
+                
+                if use_real_tx:
+
                 # Real Linux transmission
                 start_btn.setEnabled(False)
                 stop_btn.setEnabled(True)
@@ -748,8 +772,10 @@ class MainWindow(QMainWindow):
                 spam_thread.start()
                 
                 logger.info("Started REAL Bluetooth spam via Linux HCI")
-                
-            else:
+                return
+            
+            # Simulation mode (default or fallback)
+
                 # Simulation mode
                 mode_map = {
                     0: SpamMode.ADVERTISING,
