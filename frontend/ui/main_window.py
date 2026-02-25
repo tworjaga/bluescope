@@ -12,7 +12,9 @@ from PyQt6.QtCore import Qt, QTimer, pyqtSignal, QThread
 from PyQt6.QtGui import QAction, QIcon
 import asyncio
 import logging
+import threading
 from pathlib import Path
+
 
 from .device_table import DeviceTable
 from .packet_table import PacketTable
