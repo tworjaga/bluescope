@@ -9,6 +9,11 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
 
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=tworjaga.bluescope&"  />
+</div>
+
+
 A professional-grade Bluetooth monitoring and analysis tool with ML-powered anomaly detection, real-time visualization, signal duplication, security auditing, and comprehensive device profiling capabilities.
 
 ![BlueScope Screenshot](docs/screenshot.png)
@@ -436,5 +441,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you find this project useful, please consider giving it a star
 
 ---
+
 
 
