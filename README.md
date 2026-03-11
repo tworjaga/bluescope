@@ -15,9 +15,9 @@ A professional-grade Bluetooth monitoring and analysis tool with ML-powered anom
 
 ---
 
-## ✨ Features
+## Features
 
-### 🎯 Core Capabilities
+### Core Capabilities
 - **Real-time Bluetooth Monitoring** - Capture and analyze BLE traffic with live updates
 - **Professional GUI** - Dark-themed interface with 6 functional tabs
 - **ML-Powered Analytics** - Anomaly detection using Isolation Forest & Autoencoders
@@ -25,34 +25,34 @@ A professional-grade Bluetooth monitoring and analysis tool with ML-powered anom
 - **Live Visualization** - Real-time graphs for traffic and RSSI
 - **Statistics Dashboard** - Detailed metrics and performance indicators
 
-### 🔴 Signal Duplication & Live Capture
+### Signal Duplication & Live Capture
 - **Signal Recording** - Capture and store Bluetooth signals in real-time
 - **Signal Duplication** - Replay signals with multiple modes (immediate, delayed, burst, random)
 - **Live Signal Table** - Real-time visualization of captured signals with RSSI color-coding
 - **Export/Import** - Save signal captures to JSON for later analysis
 - **Signal Replay** - Replicate captured traffic patterns for testing
 
-### 🔒 Security Analysis
+### Security Analysis
 - **Device Scanner** - Discover and profile nearby Bluetooth devices
 - **Security Audit** - Comprehensive vulnerability assessment
 - **Channel Analyzer** - Analyze BLE channel usage and interference
 - **Faraday Simulator** - Educational simulation of RF isolation effects
 - **Vulnerability Detection** - Identify known vulnerable device signatures
 
-### 🚨 Bluetooth Spam (Security Testing)
+### Bluetooth Spam (Security Testing)
 - **Advertising Spam** - Flood advertising channels (simulation mode)
 - **Connection Request Spam** - Test device resilience
 - **L2CAP/ATT Packet Spam** - Protocol-level testing
 - **Real Transmission** - Linux-only with root and proper hardware
 
-### 📊 Analytics Features
+### Analytics Features
 - **Behavior Engine** - Pattern detection and baseline profiling
 - **Anomaly Detection** - Statistical and ML-based anomaly identification
 - **Device Tracking** - Monitor multiple devices simultaneously
 - **Packet Analysis** - Deep packet inspection and protocol analysis
 - **Session Replay** - Replay captured sessions for analysis
 
-### 🎨 User Interface
+### User Interface
 - **6 Tabs**: Devices, Packets, Anomalies, Statistics, Graphs, Live Capture
 - **Dark Theme** - Professional VS Code-inspired design
 - **Real-time Updates** - Live data refresh every second
@@ -61,7 +61,7 @@ A professional-grade Bluetooth monitoring and analysis tool with ML-powered anom
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Python 3.11+** (Python 3.14 recommended)
@@ -112,7 +112,7 @@ python main.py
 
 ---
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Starting BlueScope
 1. **Launch the application**:
@@ -124,25 +124,25 @@ python main.py
    - Watch real-time data populate all panels
 
 3. **Explore Features**:
-   - **📱 Devices Tab**: View discovered Bluetooth devices
-   - **📦 Packets Tab**: Inspect captured packets
-   - **⚠️ Anomalies Tab**: Review ML-detected anomalies
-   - **📊 Statistics Panel**: Monitor real-time metrics
-   - **📈 Graphs**: Visualize traffic and RSSI data
-   - **🔴 Live Capture**: Record and duplicate signals
+   - **Devices Tab**: View discovered Bluetooth devices
+   - **Packets Tab**: Inspect captured packets
+   - **Anomalies Tab**: Review ML-detected anomalies
+   - **Statistics Panel**: Monitor real-time metrics
+   - **Graphs**: Visualize traffic and RSSI data
+   - **Live Capture**: Record and duplicate signals
 
 ### Security Analysis
-1. **Open Security Audit**: Tools > 🔒 Security Audit (Ctrl+Shift+A)
-2. **Run Device Scanner**: Click "🔍 Start Security Scan"
+1. **Open Security Audit**: Tools > Security Audit (Ctrl+Shift+A)
+2. **Run Device Scanner**: Click "Start Security Scan"
 3. **Analyze Channels**: Switch to "Channel Analyzer" tab
 4. **View Results**: Review vulnerabilities and recommendations
 
 ### Signal Duplication
-1. **Open Live Capture**: Switch to "🔴 Live Capture" tab
-2. **Start Recording**: Click "⏺ Start Recording"
+1. **Open Live Capture**: Switch to "Live Capture" tab
+2. **Start Recording**: Click "Start Recording"
 3. **Configure Duplication**: Set mode (immediate/delayed/burst/random)
 4. **Start Duplication**: Click "▶ Start Duplication"
-5. **Replay Signals**: Use "🔁 Replay" controls
+5. **Replay Signals**: Use "Replay" controls
 
 ### Key Controls
 - **Ctrl+P**: Start/Stop capture
@@ -157,7 +157,7 @@ python main.py
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 bluescope/
@@ -214,7 +214,7 @@ bluescope/
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 Edit `config/settings.yaml` to customize:
 
@@ -255,7 +255,7 @@ ui:
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 ### Core (Minimal Install)
 - **PyQt6** (>=6.6.0) - GUI framework
@@ -276,7 +276,7 @@ See `requirements.txt` for complete list.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run the verification script:
 ```bash
@@ -315,7 +315,7 @@ Bluetooth Security Module Test
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -349,7 +349,7 @@ black .
 
 ---
 
-## ⚠️ Legal Notice
+## Legal Notice
 
 **For Authorized Security Testing Only**
 
@@ -369,13 +369,13 @@ The authors are not responsible for misuse of this software. Always ensure you h
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **PyQt6** - For the excellent GUI framework
 - **scikit-learn** - For ML algorithms
@@ -385,7 +385,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Support
+## Support
 
 - **Issues**: [GitHub Issues](https://github.com/tworjaga/bluescope/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/tworjaga/bluescope/discussions)
@@ -394,9 +394,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
-### Version 0.2.0 (Current) ✅
+### Version 0.2.0 (Current)
 - [x] Signal Duplication & Live Capture
 - [x] Security Audit & Device Scanner
 - [x] Channel Analyzer
@@ -421,7 +421,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📊 Project Status
+## Project Status
 
 - **Version**: 0.2.0
 - **Status**: Production Ready
@@ -431,12 +431,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🌟 Star History
+## Star History
 
-If you find this project useful, please consider giving it a star ⭐
+If you find this project useful, please consider giving it a star
 
 ---
 
-**Built with ❤️ by the BlueScope Team**
 
-**🔵 Happy Bluetooth Analysis! 🔵**
