@@ -8,10 +8,7 @@
 [![Version](https://img.shields.io/badge/Version-0.2.0-success.svg)](CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)]()
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
-
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=tworjaga.bluescope&"  />
-</div>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=tworjaga.bluescope&"  />
 
 
 A professional-grade Bluetooth monitoring and analysis tool with ML-powered anomaly detection, real-time visualization, signal duplication, security auditing, and comprehensive device profiling capabilities.
